@@ -48,11 +48,11 @@
           }
         },
         "tooltip": [
-          {"field": "properties.name", "type": "nominal", "title": "State:"},
+          {"field": "properties.name", "type": "nominal", "title": "State"},
           {
             "field": "staff_normalized",
             "type": "quantitative",
-            "title": "Staff per 100k:"
+            "title": "Staff per 100k"
           }
         ]
       }
