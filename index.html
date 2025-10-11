@@ -20,7 +20,7 @@
     h1 {
       font-size: 28px;
       font-weight: 600;
-      color: #333;
+      color: #000;
       margin-bottom: 50px;
       text-transform: capitalize;
     }
@@ -36,23 +36,24 @@
   <!-- Page Title -->
   <h1>Healthcare Access and Disease Trends in Malaysia</h1>
 
-  <!-- Chart Containers -->
+  <!-- Chart containers -->
   <div id="choropleth_map"></div>
   <div id="bubble_plot" style="margin-top: 60px;"></div>
 
   <script type="text/javascript">
-    // Choropleth Map
+    // Choropleth map
     var spec1 = "healthcare_staff_choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec1).then(function(result) {
-      // Vega view instance
-    }).catch(console.error);
+    vegaEmbed('#choropleth_map', spec1)
+      .then(function(result) {
+        // Vega view instance
+      }).catch(console.error);
 
-    // Infectious Disease Bubble Plot
+    // Infectious disease bubble plot
     var spec2 = "infectious_disease_bubble_plot.vg.json";
-    vegaEmbed('#bubble_plot', spec2).then(function(result) {
-      // Vega view instance
-    }).catch(console.error);
+    vegaEmbed('#bubble_plot', spec2)
+      .then(function(result) {
+        // Vega view instance
+      }).catch(console.error);
   </script>
-
 </body>
 </html>
