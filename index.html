@@ -10,8 +10,9 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
   <style>
+    /* Force vertical stacking and centering of charts */
     #choropleth_map, #bubble_plot {
-      display: block;  
+      display: block;   
       clear: both;      
       margin: 40px auto; 
       max-width: 900px;
@@ -19,9 +20,12 @@
 
     /* Title styling */
     h1 {
-      text-align: center;
-      color: black;
-      margin-bottom: 40px;
+      text-align: center !important;
+      color: black !important;
+      margin-bottom: 40px !important;
+      display: block !important;
+      position: relative !important;
+      z-index: 10 !important;
     }
   </style>
 </head>
