@@ -74,10 +74,10 @@
         },
         "color": {"value": "#3b82f6"},
         "tooltip": [
-          {"field": "Year", "title": "Year:"},
-          {"field": "Infectious Diseases", "title": "Disease:"},
-          {"field": "Number of Cases", "title": "Cases:"},
-          {"field": "Incidence Rate", "title": "Incidence Rate:"}
+          {"field": "Year", "title": "Year"},
+          {"field": "Infectious Diseases", "title": "Disease"},
+          {"field": "Number of Cases", "title": "Cases"},
+          {"field": "Incidence Rate", "title": "Incidence Rate"}
         ]
       }
     },
