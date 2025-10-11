@@ -8,25 +8,46 @@
 
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <style>
+    #choropleth_map, #bubble_plot {
+      display: block;  
+      clear: both;      
+      margin: 40px auto; 
+      max-width: 900px;
+    }
+
+    /* Title styling */
+    h1 {
+      text-align: center;
+      color: black;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Page Title -->
+  <h1>Healthcare Access and Disease Trends in Malaysia</h1>
+
   <!-- Chart containers -->
   <div id="choropleth_map"></div>
-  <div id="bubble_plot" style="margin-top: 40px;"></div>
+  <div id="bubble_plot"></div>
 
   <script type="text/javascript">
     // Choropleth map
     var spec1 = "healthcare_staff_choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec1).then(function(result) {
-      // result.view is the Vega view instance
-    }).catch(console.error);
+    vegaEmbed('#choropleth_map', spec1)
+      .then(function(result) {
+        // result.view is the Vega view instance
+      }).catch(console.error);
 
     // Infectious disease bubble plot
     var spec2 = "infectious_disease_bubble_plot.vg.json";
-    vegaEmbed('#bubble_plot', spec2).then(function(result) {
-      // result.view is the Vega view instance
-    }).catch(console.error);
+    vegaEmbed('#bubble_plot', spec2)
+      .then(function(result) {
+        // result.view is the Vega view instance
+      }).catch(console.error);
   </script>
 
 </body>
