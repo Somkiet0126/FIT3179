@@ -8,52 +8,31 @@
 
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
-  <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 40px;
-      background-color: #fafafa;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 50px;
-      text-transform: capitalize;
-    }
-
-    #choropleth_map, #bubble_plot {
-      margin: auto;
-      max-width: 900px;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Page Title -->
-  <h1>Healthcare Access and Disease Trends in Malaysia</h1>
+  <h1 style="text-align: center; color: black; margin-bottom: 40px;">
+    Healthcare Access and Disease Trends in Malaysia
+  </h1>
 
   <!-- Chart containers -->
   <div id="choropleth_map"></div>
-  <div id="bubble_plot" style="margin-top: 60px;"></div>
+  <div id="bubble_plot" style="margin-top: 40px;"></div>
 
   <script type="text/javascript">
     // Choropleth map
     var spec1 = "healthcare_staff_choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec1)
-      .then(function(result) {
-        // Vega view instance
-      }).catch(console.error);
+    vegaEmbed('#choropleth_map', spec1).then(function(result) {
+      // result.view is the Vega view instance
+    }).catch(console.error);
 
     // Infectious disease bubble plot
     var spec2 = "infectious_disease_bubble_plot.vg.json";
-    vegaEmbed('#bubble_plot', spec2)
-      .then(function(result) {
-        // Vega view instance
-      }).catch(console.error);
+    vegaEmbed('#bubble_plot', spec2).then(function(result) {
+      // result.view is the Vega view instance
+    }).catch(console.error);
   </script>
+
 </body>
 </html>
